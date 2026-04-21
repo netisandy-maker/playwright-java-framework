@@ -6,9 +6,9 @@ import com.microsoft.playwright.options.AriaRole;
 
 public class DashboardPage extends BasePage {
     // Properties Locators goes here.
-    Locator heading;
-    Locator successMessage;
-    Locator logout;
+    private Locator heading;
+    private Locator successMessage;
+    private Locator logout;
 
     // Constructor call super() /sets up locators.
     public DashboardPage(Page page, String baseUrl) {

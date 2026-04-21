@@ -3,9 +3,12 @@ package pages;
 import com.microsoft.playwright.Page;
 
 public class BasePage {
-    Page page;
-    String baseUrl;
+    protected Page page; // protected so that it can be accessed by child classes
+    protected String baseUrl;
 
+    // Why protected? Because we want to access these properties in the child
+    // classes like LoginPage and DashboardPage. If we make them private, they won't
+    // be accessible in the child classes.
     // Created the contructor below
     public BasePage(Page page, String baseUrl) {
         this.page = page;

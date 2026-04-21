@@ -5,11 +5,14 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
 
 public class LoginPage extends BasePage {
-    Locator usernameField;
-    Locator passwordField;
-    Locator loginButton;
-    Locator errorMessage;
-    Locator successMessage;
+    private Locator usernameField;
+    private Locator passwordField;
+    private Locator loginButton;
+    private Locator errorMessage;
+    private Locator successMessage;
+    // Why private? Because these locators are only used within the LoginPage class.
+    // They are not needed outside of this class, so we can encapsulate them by
+    // making them private. This helps to keep our code clean and maintainable.
 
     public LoginPage(Page page, String baseUrl) {
         super(page, baseUrl);
